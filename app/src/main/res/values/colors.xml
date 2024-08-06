@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="almostBlack">#222</color>
+    <color name="orange">#FF8c00</color>
+    <color name="lavender">#9173EB</color>
+    <color name="c1">#1488CC</color>
+
+    <color name="red">#F00</color>
+
+    <color name="c2">#2B32B2</color>
+
+    <color name="c3">#4b6cb7</color>
+    <color name="c4">#182848</color>
+
+    <color name="c5">#434343</color>
+    <color name="c6">#000000</color>
+
+
+
+
+</resources>

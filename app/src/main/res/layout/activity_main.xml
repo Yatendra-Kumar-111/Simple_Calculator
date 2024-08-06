@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background"
+    >
+
+
+    <TextView
+        android:id="@+id/calculator"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="2dp"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowRadius="30"
+        android:text="@string/calculator"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/display_result1"
+        style="@style/buttonRow"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/calculator"
+
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="0dp"
+        android:gravity="center"
+        android:hint="Answer :- "
+        android:text=""
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#fff"
+        android:textColorHint="#999090"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/input_num_1"
+        style="@style/buttonRow"
+        android:layout_width="360dp"
+        android:layout_height="68dp"
+        android:layout_below="@+id/display_result1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="60dp"
+
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="10dp"
+
+        android:inputType="numberDecimal"
+
+        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
+
+        android:text=""
+        android:textAlignment="textStart"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:hint="Enter Number..."
+        android:textColorHint="#999090"
+        />
+
+    <EditText
+        style="@style/buttonRow"
+        android:id="@+id/input_num_2"
+        android:layout_width="360dp"
+        android:layout_height="68dp"
+        android:layout_below="@+id/input_num_1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="10dp"
+
+        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
+        android:text=""
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textAlignment="textStart"
+
+        android:inputType="numberDecimal"
+
+        android:hint="Enter Number..."
+        android:textColorHint="#999090"
+        />
+
+
+    <LinearLayout
+        style="@style/buttonRow"
+        android:id="@+id/layout_opertors"
+
+        android:layout_width="397dp"
+        android:layout_height="118dp"
+        android:layout_below="@+id/input_num_2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="4dp"
+
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        >
+
+
+        <Button
+            android:id="@+id/btnPlus"
+            style="@style/buttonOperatorCheck"
+            android:background="@drawable/btn_equal"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+
+            android:onClick="plus_operation"
+
+            android:text="+"
+            android:textSize="50sp"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            android:id="@+id/btnMinus"
+            style="@style/buttonOperatorCheck"
+            android:background="@drawable/btn_equal"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+
+            android:onClick="minus_operation"
+
+            android:text="-"
+            android:textColor="#FFFFFF"
+            android:textSize="50sp" />
+
+        <Button
+            android:id="@+id/btnMul"
+            style="@style/buttonOperatorCheck"
+            android:background="@drawable/btn_equal"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="X"
+            android:textColor="@color/white"
+            android:onClick="mul_operation"
+
+            android:textSize="50sp" />
+
+        <Button
+            android:id="@+id/btnDiv"
+            style="@style/buttonOperatorCheck"
+            android:background="@drawable/btn_equal"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+
+            android:onClick="div_operation"
+            android:textColor="@color/white"
+            android:text="/"
+            android:textSize="50sp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Yatendra_Kumar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginEnd="-3dp"
+        android:layout_marginBottom="4dp"
+
+        android:gravity="center"
+        android:letterSpacing="0.1"
+        android:text="Yatendra Kumar"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#F2A65A"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</RelativeLayout>
